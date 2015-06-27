@@ -1,7 +1,7 @@
 <?php
 
 /* 
-* Enqueue parent and child stylesheets
+* Enqueue parent and child stylesheets - needed for all mods
 */
 
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
@@ -11,7 +11,7 @@ function theme_enqueue_styles() {
 }
 
 /*
-* Modify existing sidebar widget to include dropdown arrows
+* Modify existing sidebar widget to include dropdown arrows - needed for accordion-folding widgets
 */
 
 add_action( 'widgets_init', 'aqa_replace_sidebar', 11 );
@@ -29,10 +29,21 @@ function aqa_replace_sidebar() {
 }
 
 /*
-* Enqueue JavaScript for accordion action
+* Enqueue JavaScript for accordion-folding widget action
 */
 
-function aqa_scripts() {
+function accordion_scripts() {
 	wp_enqueue_script( 'aqa-sidebar-accordion', get_stylesheet_directory_uri() . '/aqa-sidebar-accordion.js', array('jquery') );
 }
-add_action( 'wp_enqueue_scripts', 'aqa_scripts' );
+add_action( 'wp_enqueue_scripts', 'accordion_scripts' );
+
+/*
+ * Enqueue styles and scripts for the Flickity carousel
+ */
+ 
+function carousel_scripts() {
+    wp_enqueue_style( 'flickity-style', 'https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.min.css' );
+    wp_enqueue_script( 'flickity', 'https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.pkgd.min.js', array('jquery') );
+    wp_enqueue_script( 'gallery-carousel', get_stylesheet_directory_uri() . '/aqa-carousel.js', array('flickity'), '1', true );
+}
+add_action( 'wp_enqueue_scripts', 'carousel_scripts' );

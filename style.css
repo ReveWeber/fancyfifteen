@@ -1,8 +1,8 @@
 /*
 Theme Name:   Fancy Fifteen
-Theme URI:    
-Description:  Twenty Fifteen Child Theme
-Author:       Aquilino Arts
+Theme URI:    https://github.com/ReveWeber/fancyfifteen
+Description:  Twenty Fifteen Child Theme with miscellaneous additions
+Author:       Rebecca Weber
 Author URI:   https://aquilinoarts.com
 Template:     twentyfifteen
 Version:      1.0.0
@@ -11,7 +11,7 @@ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 Tags:         light, two-columns, left-sidebar, responsive-layout, accessibility-ready
 Text Domain:  fancyfifteen
 */
-
+/***** Accordion-Folding Widgets *****/
 /* Styling on .widget-title and .accordion-arrow (plus :after) mimics the native .menu-item-has-children and .dropdown-toggle (:after) styling. */
 
 .widget-title {
@@ -23,8 +23,6 @@ Text Domain:  fancyfifteen
 
 .accordion-arrow {
     position: absolute;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
     height: 42px;
     position: absolute;
@@ -112,4 +110,25 @@ Text Domain:  fancyfifteen
         line-height: 32px;
         width: 32px;
     }
+}
+/***** Flickity-Powered Carousel from Media Library Assistant Gallery *****/
+
+.carousel-js-on {
+    height: 200px;
+    position: relative;
+}
+
+.carousel-js-on .carousel-item {
+    height: 100%;
+}
+
+.carousel-js-on img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+}
+
+.flickity-enabled:focus .flickity-viewport {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
 }
