@@ -1,0 +1,115 @@
+/*
+Theme Name:   Fancy Fifteen
+Theme URI:    
+Description:  Twenty Fifteen Child Theme
+Author:       Aquilino Arts
+Author URI:   https://aquilinoarts.com
+Template:     twentyfifteen
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         light, two-columns, left-sidebar, responsive-layout, accessibility-ready
+Text Domain:  fancyfifteen
+*/
+
+/* Styling on .widget-title and .accordion-arrow (plus :after) mimics the native .menu-item-has-children and .dropdown-toggle (:after) styling. */
+
+.widget-title {
+    position: relative;
+    padding: 0.8em 48px 0.8em 0;
+    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+.accordion-arrow {
+    position: absolute;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 42px;
+    position: absolute;
+    text-transform: lowercase;
+    top: 3px;
+    right: 0;
+    width: 42px;
+}
+
+.accordion-arrow:after {
+    content: "\f431";
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: "Genericons";
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 42px;
+    speak: none;
+    text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
+    vertical-align: top;
+    position: relative;
+    top: 0;
+    left: 1px;
+    width: 42px;
+}
+
+.tab-opened .accordion-arrow:after {
+    content: "\f432";
+}
+
+@media screen and (min-width: 46.25em) {
+    .widget-title {
+        padding: 1em 48px 1em 0;
+    }
+}
+
+@media screen and (min-width: 55em) {
+    .widget-title {
+        padding: 0.75em 48px 0.75em 0;
+    }
+}
+
+@media screen and (min-width: 59.6875em) {
+    .widget-title {
+        padding: 0.5em 30px 0.5em 0;
+    }
+    .accordion-arrow {
+        height: 24px;
+        width: 24px;
+    }
+    .accordion-arrow:after {
+        line-height: 24px;
+        font-size: 16px;
+        width: 24px;
+    }
+}
+
+@media screen and (min-width: 68.75em) {
+    .widget-title {
+        padding: 0.4643em 34px 0.4643em 0;
+    }
+    .accordion-arrow {
+        height: 28px;
+        width: 28px;
+    }
+    .accordion-arrow:after {
+        line-height: 28px;
+        width: 28px;
+    }
+}
+
+@media screen and (min-width: 77.5em) {
+    .widget-title {
+        padding: 0.5em 38px 0.5em 0;
+    }
+    .accordion-arrow {
+        height: 32px;
+        width: 32px;
+        top: 4px;
+    }
+    .accordion-arrow:after {
+        line-height: 32px;
+        width: 32px;
+    }
+}
