@@ -47,3 +47,14 @@ function carousel_scripts() {
     wp_enqueue_script( 'gallery-carousel', get_stylesheet_directory_uri() . '/aqa-carousel.js', array('flickity'), '1', true );
 }
 add_action( 'wp_enqueue_scripts', 'carousel_scripts' );
+
+/*
+* Enqueue jQuery plugin and program for attractive sidebar scrolling
+*/
+
+function aqa_scrolling_scripts() {
+	wp_enqueue_script( 'jquery-slimscroll', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.6/jquery.slimscroll.min.js', array('jquery') );
+	wp_enqueue_script( 'aqa-pretty-scrolling', get_stylesheet_directory_uri() . '/aqa-pretty-scrolling.js', array('jquery-slimscroll') );
+}
+add_action( 'wp_enqueue_scripts', 'aqa_scrolling_scripts' );
+
