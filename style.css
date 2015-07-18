@@ -136,16 +136,16 @@ Text Domain:  fancyfifteen
 }
 
 /***** Fixed Sidebar with Attractive Scrollbar *****/
+
 @media screen and (min-width: 59.6875em) {
-	.sidebar {
-		height: 100%;
-		position: fixed;
-		overflow: scroll;
-	}
-	
-	.hide-scroll {
-		overflow: hidden;
-	}
+    .sidebar {
+        height: 100%;
+        position: fixed;
+        overflow: scroll;
+    }
+    .hide-scroll {
+        overflow: hidden;
+    }
 } /* min-width: 59.6875em */
 
 /***** Closing up space in the widget list; could be used with accordions or fixed sidebar even if separate *****/
@@ -157,7 +157,7 @@ Text Domain:  fancyfifteen
 
 @media screen and (min-width: 59.6875em) {
     .widget {
-        margin-bottom:24px;
+        margin-bottom: 24px;
     }
 } /* min-width: 59.6875em */
 
@@ -172,3 +172,157 @@ Text Domain:  fancyfifteen
         margin-bottom: 32px;
     }
 } /* min-width: 77.5em */
+
+/***** Filterable, AJAX-powered WordPress gallery *****/
+/* could bear substantial additional styling and tweaking */
+
+.filtration-gallery {
+    position: relative;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.album-selector {
+    width: 60%;
+    margin-left: 40%;
+    margin-top: -13%;
+    margin-bottom: 24px;
+}
+
+.album-button {
+    text-align: center;
+    width: 45%;
+    margin-left: 55%;
+    padding: 4px;
+    border-radius: 0.25em;
+    background: linear-gradient(to bottom, #973312, #b9a80e, #b9a80e, #973312);
+    border: 1px solid #444;
+}
+
+.mla-parent-categories {
+    border: 3px solid #973312;
+    list-style: none;
+    margin: 0;
+    padding: 24px 0;
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+}
+
+.mla-parent-categories > li {
+    padding-left: 30px;
+}
+
+.mla-parent-categories > li:hover > a {
+    text-decoration: underline;
+}
+
+.mla-sub-categories li:hover > a {
+    font-weight: bold;
+}
+
+.album-arrows {
+    font-size: 75%;
+    padding-left: 4px;
+    vertical-align: middle;
+}
+
+.mla-sub-categories {
+    list-style: none;
+    width: 80%;
+    padding-right: 24px;
+    padding-left: 24px;
+    margin-left: 15%;
+    background: rgba(185, 168, 14, 0.9);
+}
+
+.mla-parent-categories a {
+    text-decoration: none;
+    color: black;
+}
+
+.filtration-gallery .entry-content {
+    margin-top: 48px;
+    padding: 0 7.6923% 7.6923%;
+}
+
+.album-with-js .album-selector,
+.album-with-js .mla-parent-categories {
+    position: absolute;
+}
+
+.album-with-js .mla-parent-categories {
+    width: 50%;
+    right: 24px;
+}
+
+.album-with-js .album-button {
+    cursor: pointer;
+}
+
+.album-with-js .mla-sub-categories {
+    position: absolute;
+    right: 100%;
+    margin-top: -1.75em;
+    display: none;
+    text-align: right;
+}
+
+.album-with-js .mla-parent-categories li:hover .mla-sub-categories {
+    display: block;
+}
+
+.album-with-js .mla-parent-categories > li:hover:before {
+    content: '\2329\2329';
+    position: absolute;
+    margin-top: 3px;
+    font-size: 75%;
+    letter-spacing: -.5em;
+    margin-left: -1.75em;
+}
+
+@media screen and (max-width: 65.625em) {
+    .album-selector {
+        margin-top: -10%;
+    }
+    .album-button {
+        width: 180px;
+        margin-left: 40%;
+    }
+}
+/* max-width 65.625em */
+
+@media screen and (max-width: 43.75em) {
+    .album-selector {
+        width: 80%;
+        margin-left: 20%;
+        margin-top: -8%;
+    }
+    .album-button {
+        position: absolute;
+        right: 24px;
+        margin-top: -34px;
+        width: 130px;
+    }
+    .mla-parent-categories {
+        margin-top: 34px;
+    }
+    .filtration-gallery .entry-content {
+        padding-top: 48px;
+    }
+    .album-with-js .mla-parent-categories {
+        margin-top: 0;
+    }
+    .album-with-js .mla-sub-categories {
+        right: 30%;
+        margin-top: 0;
+        width: 100%;
+    }
+}
+/* max-width: 43.75em */
+
+@media screen and (max-width: 43.75em) and (orientation: portrait) {
+    .album-button {
+        margin-left: 20%;
+    }
+}
+/* max-width: 43.75em and portrait */

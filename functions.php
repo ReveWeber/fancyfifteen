@@ -58,3 +58,11 @@ function aqa_scrolling_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'aqa_scrolling_scripts' );
 
+/*
+* Enqueue jQuery program for AJAXified gallery and menu button
+*/
+
+function aqa_gallery_scripts() {
+	wp_enqueue_script( 'aqa-gallery-menu', get_stylesheet_directory_uri() . '/aqa-gallery-menu.js', array('jquery') );
+}
+add_action( 'wp_enqueue_scripts', 'aqa_gallery_scripts' );
